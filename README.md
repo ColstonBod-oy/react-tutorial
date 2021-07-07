@@ -1,18 +1,31 @@
-# Getting Started with Create React App
+# React Fundamentals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Made by [Coding Addict](https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA).
 
-## Available Scripts
+## Stateless Functional Component
 
-In the project directory, you can run:
+Always returns JSX.
 
-### `npm start`
+Example:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```javascript
+const Test = () => {
+	return React.createElement(
+		"div",
+		{},
+		React.createElement("h1", {}, "Testing...")
+	);
+};
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## JSX Rules
+
+- return single element
+- div/section/article or Fragment
+- use camelCase for html attribute
+- className instead of class
+- close every element
+- formatting
 
 ### `npm test`
 
