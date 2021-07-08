@@ -2,28 +2,52 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
 
+const firstBook = {
+	img: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_US218_..jpg",
+	title: "I Love You to the Moon and Back",
+	author: "Amelia Hepworth",
+};
+
+const secondBook = {
+	img: "https://m.media-amazon.com/images/I/818qxyeFS-L._AC_US218_..jpg",
+	title: "What Are Unicorns Made Of?",
+	author: "Amelia Hepworth",
+};
+
+const thirdBook = {
+	img: "https://m.media-amazon.com/images/I/71q5k7wq-CL._AC_US218_..jpg",
+	title: "ROAR!: WARNING! This book is very NOISY!",
+	author: "Amelia Hepworth",
+};
+
 const BookList = () => {
 	return (
 		<section className="booklist">
-			<Book />
-			<Book />
-			<Book />
+			<Book
+				img={firstBook.img}
+				title={firstBook.title}
+				author={firstBook.author}
+			/>
+			<Book
+				img={secondBook.img}
+				title={secondBook.title}
+				author={secondBook.author}
+			/>
+			<Book
+				img={thirdBook.img}
+				title={thirdBook.title}
+				author={thirdBook.author}
+			/>
 		</section>
 	);
 };
 
-const Book = () => {
-	const title = "I Love You to the Moon and Back";
-	const author = "Amelia Hepworth";
-
+const Book = (props) => {
 	return (
 		<article className="book">
-			<img
-				src="https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg"
-				alt=""
-			/>
-			<h1>{title}</h1>
-			<h4>{author.toUpperCase()}</h4>
+			<img src={props.img} alt="" />
+			<h1>{props.title}</h1>
+			<h4>{props.author}</h4>
 		</article>
 	);
 };
