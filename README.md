@@ -27,7 +27,31 @@ const Test = () => {
 - close every element
 - formatting
 
-### `npm test`
+## Nested Components
+
+Example:
+
+```javascript
+const Test = () => {
+	return (
+		<div className="container">
+			<Status />
+			<Link />
+		</div>
+	);
+};
+
+const Status = () => <h1>Testing...</h1>;
+const Link = () => {
+	return (
+		<ul>
+			<li>
+				<a href="#">info</a>
+			</li>
+		</ul>
+	);
+};
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
