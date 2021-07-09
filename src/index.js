@@ -27,7 +27,13 @@ const BookList = () => {
 				img={firstBook.img}
 				title={firstBook.title}
 				author={firstBook.author}
-			/>
+			>
+				<p>
+					Show a child just how strong your love is every minute of the day!
+					Features a "To" and "From" personalization page, making this sweet
+					offering an ideal gift for baby showers, birthdays, and new parents.
+				</p>
+			</Book>
 			<Book
 				img={secondBook.img}
 				title={secondBook.title}
@@ -43,11 +49,14 @@ const BookList = () => {
 };
 
 const Book = (props) => {
+	const { img, title, author } = props;
+
 	return (
 		<article className="book">
-			<img src={props.img} alt="" />
-			<h1>{props.title}</h1>
-			<h4>{props.author}</h4>
+			<img src={img} alt="" />
+			<h1>{title}</h1>
+			<h4>{author}</h4>
+			{props.children}
 		</article>
 	);
 };

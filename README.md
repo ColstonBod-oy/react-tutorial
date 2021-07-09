@@ -82,3 +82,52 @@ const Book = () => {
 	);
 };
 ```
+
+## Props
+
+**Note: Add children props by not using self-closing tags.**
+
+**Example:**
+
+```javascript
+const BookList = () => {
+	return (
+		<section className="booklist">
+			<Book
+				img={firstBook.img}
+				title={firstBook.title}
+				author={firstBook.author}
+			>
+				<p>
+					Show a child just how strong your love is every minute of the day!
+					Features a "To" and "From" personalization page, making this sweet
+					offering an ideal gift for baby showers, birthdays, and new parents.
+				</p>
+			</Book>
+			<Book
+				img={secondBook.img}
+				title={secondBook.title}
+				author={secondBook.author}
+			/>
+			<Book
+				img={thirdBook.img}
+				title={thirdBook.title}
+				author={thirdBook.author}
+			/>
+		</section>
+	);
+};
+
+const Book = (props) => {
+	const { img, title, author } = props;
+
+	return (
+		<article className="book">
+			<img src={img} alt="" />
+			<h1>{title}</h1>
+			<h4>{author}</h4>
+			{props.children}
+		</article>
+	);
+};
+```
