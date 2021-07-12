@@ -210,3 +210,15 @@ const Book = (props) => {
 	);
 };
 ```
+
+## Import and Export
+
+**Note: File extensions can be omitted when importing JS files. Can only have one default export. Non-default exports are imported with curly brackets and use the keyword "as" when renaming.**
+
+**Example:**
+
+`import "./index.css";`
+`import books from "./books";`
+`import {books as boardBooks} from "./books";`
+`export default books;`
+`export {books};`
