@@ -217,8 +217,12 @@ const Book = (props) => {
 
 **Example:**
 
-`import "./index.css";`  
-`import books from "./books";`  
-`import {books as boardBooks} from "./books";`  
-`export default books;`  
+`import "./index.css";`
+
+`import books from "./books";`
+
+`import {books as boardBooks} from "./books";`
+
+`export default books;`
+
 `export {books};`
