@@ -10,11 +10,11 @@ Made by [Coding Addict](https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA
 
 ```javascript
 const Test = () => {
-	return React.createElement(
-		"div",
-		{},
-		React.createElement("h1", {}, "Testing...")
-	);
+   return React.createElement(
+      "div",
+      {},
+      React.createElement("h1", {}, "Testing...")
+   );
 };
 ```
 
@@ -33,23 +33,23 @@ const Test = () => {
 
 ```javascript
 const Test = () => {
-	return (
-		<div className="container">
-			<Status />
-			<Link />
-		</div>
-	);
+   return (
+      <div className="container">
+         <Status />
+         <Link />
+      </div>
+   );
 };
 
 const Status = () => <h1>Testing...</h1>;
 const Link = () => {
-	return (
-		<ul>
-			<li>
-				<a href="#">info</a>
-			</li>
-		</ul>
-	);
+   return (
+      <ul>
+         <li>
+            <a href="#">info</a>
+         </li>
+      </ul>
+   );
 };
 ```
 
@@ -59,9 +59,9 @@ const Link = () => {
 
 ```javascript
 const Author = () => (
-	<h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>
-		Amelia Hepworth
-	</h4>
+   <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>
+      Amelia Hepworth
+   </h4>
 );
 ```
 
@@ -73,13 +73,13 @@ const Author = () => (
 
 ```javascript
 const Book = () => {
-	const title = "I Love You to the Moon and Back";
-	const author = "Amelia Hepworth";
+   const title = "I Love You to the Moon and Back";
+   const author = "Amelia Hepworth";
 
-	return (
-		<h1>{title}</h1>
-		<h4>{author}</h4>
-	);
+   return (
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+   );
 };
 ```
 
@@ -91,44 +91,44 @@ const Book = () => {
 
 ```javascript
 const BookList = () => {
-	return (
-		<section className="booklist">
-			<Book
-				img={firstBook.img}
-				title={firstBook.title}
-				author={firstBook.author}
-			>
-				<p>
-					Show a child just how strong your love is every minute of the day!
-					Features a "To" and "From" personalization page, making this sweet
-					offering an ideal gift for baby showers, birthdays, and new parents.
-				</p>
-			</Book>
-			<Book
-				img={secondBook.img}
-				title={secondBook.title}
-				author={secondBook.author}
-			/>
-			<Book
-				img={thirdBook.img}
-				title={thirdBook.title}
-				author={thirdBook.author}
-			/>
-		</section>
-	);
+   return (
+      <section className="booklist">
+         <Book
+            img={firstBook.img}
+            title={firstBook.title}
+            author={firstBook.author}
+         >
+            <p>
+               Show a child just how strong your love is every minute of the day!
+               Features a "To" and "From" personalization page, making this sweet
+               offering an ideal gift for baby showers, birthdays, and new parents.
+            </p>
+         </Book>
+         <Book
+            img={secondBook.img}
+            title={secondBook.title}
+            author={secondBook.author}
+         />
+         <Book
+	    img={thirdBook.img}
+	    title={thirdBook.title}
+	    author={thirdBook.author}
+	 />
+      </section>
+   );
 };
 
 const Book = (props) => {
-	const { img, title, author } = props;
+   const { img, title, author } = props;
 
-	return (
-		<article className="book">
-			<img src={img} alt="" />
-			<h1>{title}</h1>
-			<h4>{author}</h4>
-			{props.children}
-		</article>
-	);
+   return (
+      <article className="book">
+         <img src={img} alt="" />
+         <h1>{title}</h1>
+         <h4>{author}</h4>
+         {props.children}
+      </article>
+   );
 };
 ```
 
@@ -140,48 +140,48 @@ const Book = (props) => {
 
 ```javascript
 const books = [
-	{
-		id: 1,
-		img: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_US218_..jpg",
-		title: "I Love You to the Moon and Back",
-		author: "Amelia Hepworth",
-	},
+   {
+      id: 1,
+      img: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_US218_..jpg",
+      title: "I Love You to the Moon and Back",
+      author: "Amelia Hepworth",
+   },
 
-	{
-		id: 2,
-		img: "https://m.media-amazon.com/images/I/818qxyeFS-L._AC_US218_..jpg",
-		title: "What Are Unicorns Made Of?",
-		author: "Amelia Hepworth",
-	},
+   {
+      id: 2,
+      img: "https://m.media-amazon.com/images/I/818qxyeFS-L._AC_US218_..jpg",
+      title: "What Are Unicorns Made Of?",
+      author: "Amelia Hepworth",
+   },
 
-	{
-		id: 3,
-		img: "https://m.media-amazon.com/images/I/71q5k7wq-CL._AC_US218_..jpg",
-		title: "ROAR!: WARNING! This book is very NOISY!",
-		author: "Amelia Hepworth",
-	},
+   {
+      id: 3,
+      img: "https://m.media-amazon.com/images/I/71q5k7wq-CL._AC_US218_..jpg",
+      title: "ROAR!: WARNING! This book is very NOISY!",
+      author: "Amelia Hepworth",
+   },
 ];
 
 const BookList = () => {
-	return (
-		<section className="booklist">
-			{books.map((book) => {
-				return <Book key={book.id} {...book}></Book>;
-			})}
-		</section>
-	);
+   return (
+      <section className="booklist">
+         {books.map((book) => {
+	    return <Book key={book.id} {...book}></Book>;
+	 })}
+      </section>
+   );
 };
 
 const Book = (props) => {
-	const { img, title, author } = props;
+   const { img, title, author } = props;
 
-	return (
-		<article className="book">
-			<img src={img} alt="" />
-			<h1>{title}</h1>
-			<h4>{author}</h4>
-		</article>
-	);
+   return (
+      <article className="book">
+         <img src={img} alt="" />
+	 <h1>{title}</h1>
+	 <h4>{author}</h4>
+      </article>
+   );
 };
 ```
 
@@ -193,21 +193,21 @@ const Book = (props) => {
 
 ```javascript
 const Book = (props) => {
-	const { img, title, author } = props;
-	const clickHandler = (title, author) => {
-		alert(`${title}\nby ${author}\n\n✓Book Added`);
-	};
+   const { img, title, author } = props;
+   const clickHandler = (title, author) => {
+      alert(`${title}\nby ${author}\n\n✓Book Added`);
+   };
 
-	return (
-		<article className="book">
-			<img src={img} alt="" />
-			<h1>{title}</h1>
-			<h4>{author}</h4>
-			<button type="button" onClick={() => clickHandler(title, author)}>
-				Add
-			</button>
-		</article>
-	);
+   return (
+      <article className="book">
+         <img src={img} alt="" />
+         <h1>{title}</h1>
+	 <h4>{author}</h4>
+	 <button type="button" onClick={() => clickHandler(title, author)}>
+	    Add
+	 </button>
+      </article>
+   );
 };
 ```
 
