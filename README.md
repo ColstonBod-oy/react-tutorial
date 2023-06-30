@@ -1,6 +1,6 @@
 # React Fundamentals
 
-Made by [Coding Addict](https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA).
+Credits to: [Coding Addict](https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA).
 
 ## Stateless Functional Component
 
